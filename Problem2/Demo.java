@@ -12,5 +12,10 @@ public class Demo {
         // Move the MovablePoint
         movablePoint.move();
         System.out.println("After moving: " + movablePoint);
+
+        // Test additional functionality
+        System.out.println("\nAdditional Functionality:");
+        System.out.println("Distance between point and movablePoint: " + point.distanceTo(movablePoint));
+        System.out.println("Is movablePoint moving diagonally? " + movablePoint.isMovingDiagonally());
     }
 }

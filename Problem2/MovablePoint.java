@@ -5,9 +5,9 @@ public class MovablePoint extends Point {
 
     // Constructors
     public MovablePoint(float x, float y, float xSpeed, float ySpeed) {
-        super(x, y); // Call the superclass constructor
-        this.xSpeed = xSpeed;
-        this.ySpeed = ySpeed;
+        super(x, y); // Call superclass constructor
+        setXSpeed(xSpeed); // Validate and set xSpeed
+        setYSpeed(ySpeed); // Validate and set ySpeed
     }
 
     public MovablePoint(float xSpeed, float ySpeed) {
@@ -20,30 +20,41 @@ public class MovablePoint extends Point {
 
     // Getter and Setter methods
     public float getXSpeed() { return xSpeed; }
-    public void setXSpeed(float xSpeed) { this.xSpeed = xSpeed; }
+    public void setXSpeed(float xSpeed) {
+        this.xSpeed = xSpeed;
+    }
 
     public float getYSpeed() { return ySpeed; }
-    public void setYSpeed(float ySpeed) { this.ySpeed = ySpeed; }
-
-    public void setSpeed(float xSpeed, float ySpeed) {
-        this.xSpeed = xSpeed;
+    public void setYSpeed(float ySpeed) {
         this.ySpeed = ySpeed;
     }
 
+    // Method to set both xSpeed and ySpeed
+    public void setSpeed(float xSpeed, float ySpeed) {
+        setXSpeed(xSpeed);
+        setYSpeed(ySpeed);
+    }
+
+    // Method to get both xSpeed and ySpeed as an array
     public float[] getSpeed() {
         return new float[]{xSpeed, ySpeed};
     }
 
-    // Move method
+    // Method to move the point
     public MovablePoint move() {
         setX(getX() + xSpeed);
         setY(getY() + ySpeed);
         return this;
     }
 
-    // toString method
+    // toString method to display MovablePoint details
     @Override
     public String toString() {
         return super.toString() + ", Speed: (" + xSpeed + ", " + ySpeed + ")";
+    }
+
+    // Additional method to check if the point is moving diagonally
+    public boolean isMovingDiagonally() {
+        return xSpeed != 0 && ySpeed != 0;
     }
 }
