@@ -6,6 +6,10 @@ Coach Bob, age: 27, gender: M
 Lynne Brooke, age: 16, gender: F, ID: HS95129, GPA: 3.5
 Duke Java, age: 34, gender: M, Subject: Computer Science, Salary: $50000.0
 Ima Frosh, age: 18, gender: F, ID: UCB123, GPA: 4.0, Year: 1, Major: English
+
+Additional Functionality:
+Is Lynne on the honor roll? true
+Mr. Java's monthly salary: $4166.666666666667
 ```
 
 #### **Verification:**
@@ -37,6 +41,10 @@ The output is **perfect** and meets all requirements.
 Point: (1.0, 2.0)
 MovablePoint: (3.0, 4.0), Speed: (1.0, 1.0)
 After moving: (4.0, 5.0), Speed: (1.0, 1.0)
+
+Additional Functionality:
+Distance between point and movablePoint: 4.242640687119285
+Is movablePoint moving diagonally? true
 ```
 
 #### **Verification:**
@@ -63,6 +71,21 @@ Shape: Circle, Area: 78.53981633974483, Perimeter: 31.41592653589793
 Shape: Ellipse, Area: 75.39822368615503, Perimeter: 31.730875151127922
 Shape: Triangle, Area: 6.0, Perimeter: 12.0
 Shape: Equilateral Triangle, Area: 15.588457268119896, Perimeter: 18.0
+
+---
+
+Shape: Circle, Area: 78.53981633974483, Perimeter: 31.41592653589793
+Is regular? true
+
+Shape: Ellipse, Area: 75.39822368615503, Perimeter: 31.72853051925214
+Is regular? false
+Aspect Ratio: 1.5
+
+Shape: Triangle, Area: 6.0, Perimeter: 12.0
+Is regular? false
+
+Shape: Equilateral Triangle, Area: 15.588457268119896, Perimeter: 18.0
+Is regular? true
 ```
 
 #### **Verification:**
@@ -106,6 +129,7 @@ Shape: Circle, Area: 314.1592653589793, Perimeter: 62.83185307179586
 Shape: Ellipse, Area: 301.59289474462014, Perimeter: 63.45706103850428
 Shape: Triangle, Area: 24.0, Perimeter: 24.0
 Shape: Equilateral Triangle, Area: 62.353829072479584, Perimeter: 36.0
+
 ```
 
 #### **Verification:**
