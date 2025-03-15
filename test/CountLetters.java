@@ -1,4 +1,11 @@
+// ****************************************************************
 // CountLetters.java
+//
+// Reads a word from the user and prints the number of occurrences
+// of each letter in the word. Modified to handle non-letter
+// characters by catching ArrayIndexOutOfBoundsException.
+//          
+// ****************************************************************
 import java.util.Scanner;
 
 public class CountLetters {
@@ -16,7 +23,8 @@ public class CountLetters {
         // Count frequency of each letter in string
         for (int i = 0; i < word.length(); i++) {
             try {
-                counts[word.charAt(i) - 'A']++; // Increment count for the letter
+                // Increment count for the letter
+                counts[word.charAt(i) - 'A']++;
             } catch (ArrayIndexOutOfBoundsException e) {
                 // Handle non-letter characters
                 System.out.println("Not a letter: " + word.charAt(i));
