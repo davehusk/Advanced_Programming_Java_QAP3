@@ -12,5 +12,10 @@ public class Demo {
         System.out.println(lynne);
         System.out.println(mrJava);
         System.out.println(ima);
+
+        // Test additional functionality
+        System.out.println("\nAdditional Functionality:");
+        System.out.println("Is Lynne on the honor roll? " + lynne.isHonorRoll());
+        System.out.println("Mr. Java's monthly salary: $" + mrJava.getMonthlySalary());
     }
 }
