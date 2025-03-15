@@ -4,7 +4,16 @@ public class Circle extends Shape {
 
     // Constructor
     public Circle(String name, double radius) {
-        super(name);
+        super(name); // Call superclass constructor
+        setRadius(radius); // Validate and set radius
+    }
+
+    // Getter and Setter methods with input validation
+    public double getRadius() { return radius; }
+    public void setRadius(double radius) {
+        if (radius < 0) {
+            throw new IllegalArgumentException("Radius cannot be negative.");
+        }
         this.radius = radius;
     }
 
@@ -17,5 +26,11 @@ public class Circle extends Shape {
     @Override
     public double getPerimeter() {
         return 2 * Math.PI * radius;
+    }
+
+    // Override isRegular method (a circle is always regular)
+    @Override
+    public boolean isRegular() {
+        return true;
     }
 }

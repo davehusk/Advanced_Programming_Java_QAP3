@@ -12,6 +12,11 @@ public class Demo {
         // Print details of each shape
         for (Shape shape : shapes) {
             System.out.println(shape);
+            System.out.println("Is regular? " + shape.isRegular());
+            if (shape instanceof Ellipse) {
+                System.out.println("Aspect Ratio: " + ((Ellipse) shape).getAspectRatio());
+            }
+            System.out.println();
         }
     }
 }

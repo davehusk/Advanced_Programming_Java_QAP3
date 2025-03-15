@@ -4,6 +4,9 @@ public abstract class Shape {
 
     // Constructor
     public Shape(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be empty or null.");
+        }
         this.name = name;
     }
 
@@ -11,9 +14,12 @@ public abstract class Shape {
     public abstract double getArea();
     public abstract double getPerimeter();
 
-    // toString method
+    // toString method to display Shape details
     @Override
     public String toString() {
         return "Shape: " + name + ", Area: " + getArea() + ", Perimeter: " + getPerimeter();
     }
+
+    // Additional method to check if the shape is regular
+    public abstract boolean isRegular();
 }
